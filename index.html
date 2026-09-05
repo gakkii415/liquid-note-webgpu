@@ -1,15 +1,31 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <link rel="icon" type="image/png" href="./assets/poster-0qKU1qpL.png" />
-    <title>Liquid Note — WebGPU playground</title>
-    <script type="module" crossorigin src="./assets/index-55FZVPDy.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CxXnDwvv.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#08090d">
+  <meta name="description" content="WebGPUで動く液体ガラス球をその場で試せる小さなプレイグラウンド">
+  <title>Liquid Note</title>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#08090d;color:#f7f7f8;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body{display:grid;grid-template-rows:auto 1fr;min-height:100svh}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px max(18px,env(safe-area-inset-right)) 14px max(18px,env(safe-area-inset-left));border-bottom:1px solid #ffffff1a;background:#0b0c11e8;backdrop-filter:blur(18px)}
+    .brand{display:flex;align-items:center;gap:11px;min-width:0}.mark{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 30% 20%,#fff 0 5%,#92e8ff 22%,#8f62ff 55%,#ff4d9d 82%,#151525 100%);box-shadow:0 0 24px #976fff80}
+    h1{font-size:15px;line-height:1.1;margin:0;letter-spacing:.02em}.sub{font-size:11px;color:#9a9daa;margin-top:3px}
+    a{color:inherit;text-decoration:none}.open{flex:none;padding:9px 13px;border:1px solid #ffffff24;border-radius:10px;background:#ffffff0d;font-size:12px;font-weight:650}
+    main{position:relative;min-height:0}.frame{display:block;width:100%;height:100%;min-height:calc(100svh - 59px);border:0;background:#000}
+    .hint{position:absolute;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);padding:8px 11px;border:1px solid #ffffff1c;border-radius:999px;background:#11131acc;backdrop-filter:blur(14px);color:#c9cad1;font-size:11px;white-space:nowrap;pointer-events:none;box-shadow:0 8px 30px #0008}
+    @media(max-width:520px){header{padding-top:max(12px,env(safe-area-inset-top))}.sub{display:none}.open{padding:8px 10px}.hint{bottom:max(10px,env(safe-area-inset-bottom))}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><div class="mark" aria-hidden="true"></div><div><h1>Liquid Note</h1><div class="sub">WebGPU liquid-glass playground</div></div></div>
+    <a class="open" href="https://lersent001.github.io/orb/" target="_blank" rel="noopener">全画面で開く ↗</a>
+  </header>
+  <main>
+    <iframe class="frame" src="https://lersent001.github.io/orb/" title="Liquid Orb Editor" loading="eager" allow="clipboard-write"></iframe>
+    <div class="hint">プリセットを選んで、色や動きを触ってみる</div>
+  </main>
+</body>
 </html>
